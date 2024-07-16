@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "name": "Rabia",
+      "age": 22,
+      "gender": "female",
+      "studyLevel": "university",
+      "department": "medicine"
+    },
+    {
+      "name": "Bushra",
+      "age": 20,
+      "gender": "female",
+      "studyLevel": "university",
+      "department": "computer science"
+    },
+    {
+      "name": "Meryem",
+      "age": 19,
+      "gender": "female",
+      "studyLevel": "university",
+      "department": "psychology"
+    },
+    {
+      "name": "Hayriye",
+      "age": 15,
+      "gender": "female",
+      "studyLevel": "high school",
+      "department": null
+    },
+    {
+      "name": "Nayla",
+      "age": 20,
+      "gender": "female",
+      "studyLevel": "university",
+      "department": "math pedagogy"
+    }
+  ]
+}
