@@ -7,11 +7,13 @@ const {
   searchBook,
   deleteBook,
   getBookById,
+  updateBook,
   upload,
 } = require('../controllers/bookController');
 
 router.post('/addBook', upload.single('image'), addBook);
 router.delete('/delete/:id', deleteBook);
+router.put('/update/:id', updateBook);
 router.get('/search', searchBook);
 router.get('/:id', getBookById);
 router.get('/', getAllBooks);

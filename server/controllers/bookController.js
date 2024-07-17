@@ -27,6 +27,28 @@ const addBook = async (req, res) => {
   }
 };
 
+const updateBook = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const { title, author, year } = req.body;
+    console.log('Request body: ', req.body);
+    const imagePath = req.file ? req.file.path : null;
+
+    console.log(id, title, author, year);
+
+    let query = `
+      UPDATE books 
+      SET title = '${title}', author = '${author}', year = '${year}'
+      ${imagePath ? `, image = '${imagePath}'` : ''}
+      WHERE id = '${id}'`;
+
+    await connectDB(query);
+    res.status(200).send('Book updated successfully');
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
+
 const getAllBooks = async (req, res) => {
   try {
     const records = await connectDB(`SELECT * FROM books`);
@@ -75,5 +97,6 @@ module.exports = {
   searchBook,
   deleteBook,
   getBookById,
+  updateBook,
   upload,
 };
