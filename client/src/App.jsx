@@ -16,7 +16,7 @@ function App() {
     <>
       <ToastContainer position="top-right" />
       <div className="app">
-        <Sidebar title="Admin Panel" sidebarItems={sidebarItems} />
+        <Sidebar title="BookWorm" sidebarItems={sidebarItems} />
         <div className="main content">
           <AllRoutes />
         </div>

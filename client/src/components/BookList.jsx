@@ -35,6 +35,7 @@ const BookList = ({ books }) => {
   };
 
   const handleConfirmEdit = async (updatedBook) => {
+    console.log(updatedBook);
     const url = `http://localhost:5000/api/v1/books/update/${updatedBook.id}`;
     const formData = new FormData();
     formData.append('title', updatedBook.title);
